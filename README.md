@@ -58,6 +58,13 @@ ytrans#translate(text, lang = g:ytrans_default_lang, callback = '')
 echo ytrans#translate('test')
 ```
 
+### Utility
+ytrans#get_selection()  
+get visual selection.
+```vimscript
+vnoremap <Leader>te :<C-u>call ytrans#popup(ytrans#get_selection(), 'en')<CR>
+```
+
 ## Mapping
 see [/plugin/ytrans.vim](/plugin/ytrans.vim)
 
