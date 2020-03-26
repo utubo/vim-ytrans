@@ -3,7 +3,7 @@
 Yandex Translate in Vim.  
 see also https://tech.yandex.com/translate/
 
-## Required
+## Requirements
 - Yandex API-key. Get it on the [Yandex](https://translate.yandex.com/developers/keys).
 - curl or Powershell.
 
