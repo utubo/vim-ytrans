@@ -33,10 +33,10 @@ I pen to have.
 ## Languages
 see [here](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/#api-overview__languages).  
 and  
-`.` is last used language.  
-### examples
+`.` is the last language used in current buffer.  
+### Examples
 - `ja-en` ... Japanese to English
-- `en` ... Automatically to English
+- `en` ... &lt;Automatically&gt; to English
 
 ## API
 
