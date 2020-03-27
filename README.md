@@ -33,7 +33,8 @@ I pen to have.
 ## Languages
 see [here](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/#api-overview__languages).  
 and  
-`.` is the last language used in current buffer.  
+`.` is the last language used in current buffer.
+
 ### Examples
 - `ja-en` ... Japanese to English
 - `en` ... &lt;Automatically&gt; to English
@@ -57,6 +58,13 @@ ytrans#translate(text, lang = g:ytrans_default_lang, callback = '')
 ```vimscript
 echo ytrans#translate('test')
 ```
+
+### Input language
+ytrans#input_lang()
+```vimscript
+echo ytrans#translate('test', ytrans#input_lang())
+```
+This sets input value to b:ytrans_buf_lang.
 
 ### Utility
 ytrans#get_selection()  

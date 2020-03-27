@@ -13,7 +13,7 @@ nmap <plug>(ytrans-popup-cword-en) :<C-u>call ytrans#popup(expand('<cword>'), 'e
 nmap <plug>(ytrans-popup-line)     :<C-u>call ytrans#popup(getline('.'))<CR>
 vmap <plug>(ytrans-popup)          :<C-u>call ytrans#popup(ytrans#get_selection())<CR>
 vmap <plug>(ytrans-popup-en)       :<C-u>call ytrans#popup(ytrans#get_selection(), 'en')<CR>
-vmap <Plug>(ytrans-replace)        :<C-u>execute printf('call ytrans#replace("%s")', input('lang(from-to): '))<CR>
+vmap <Plug>(ytrans-replace)        :<C-u>call ytrans#replace(ytrans#input_lang())<CR>
 vmap <Plug>(ytrans-replace-repeat) :<C-u>call ytrans#replace('.')<CR>
 
 if get(g:, 'ytrans_default_key_mappings', 1)

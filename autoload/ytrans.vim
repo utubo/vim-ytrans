@@ -120,6 +120,16 @@ func! s:PopupCb(result) abort
   call popup_atcursor(split(a:result, "\n"), #{})
 endfunc
 
+func! ytrans#input_lang()
+  echoh Question
+  let l:lang = input('lang(from-to): ')
+  echoh None
+  if !empty(l:lang)
+    let b:ytrans_buf_lang = l:lang
+  endif
+  return l:lang
+endfunc
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
