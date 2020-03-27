@@ -116,8 +116,12 @@ func! ytrans#popup(text, lang = '') abort
   call ytrans#translate(a:text, a:lang, 's:PopupCb')
 endfunc
 
+let s:win_id = 0
 func! s:PopupCb(result) abort
-  call popup_atcursor(split(a:result, "\n"), #{})
+  if s:win_id && popup_getpos(s:win_id) != {}
+    call popup_close(s:win_id)
+  endif
+  let s:win_id = popup_atcursor(split(a:result, "\n"), #{ moved: 'any' })
 endfunc
 
 func! ytrans#input_lang()
